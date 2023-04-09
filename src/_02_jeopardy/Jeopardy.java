@@ -138,10 +138,10 @@ public class Jeopardy implements ActionListener {
             secondButton.setText("");
         }
         else if (buttonPressed == thirdButton) {
-            whateveryouwant = askQuestion("What is the official world record for solving the 3x3 Rubiks cube? (seconds)", "3.47", 600);
+            whateveryouwant = askQuestion("What is the official world record for solving the 3x3 Rubiks cube? (seconds, to the hundredth place)", "3.47", 600);
         }
         else if (buttonPressed == fourthButton){
-            whateveryouwant = askQuestion("What is the official world record for solving the 2x2 Rubiks cube? (seconds)","0.47", 800);
+            whateveryouwant = askQuestion("What is the official world record for solving the 2x2 Rubiks cube? (seconds, to the hundredth place)","0.47", 800);
         }
         else if (buttonPressed == fifthButton){
             whateveryouwant = askQuestion("Where was the rubiks cube invented (City only)", "Budapest", 1000);
