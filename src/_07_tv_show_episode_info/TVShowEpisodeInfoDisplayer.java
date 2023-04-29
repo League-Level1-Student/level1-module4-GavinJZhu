@@ -1,6 +1,9 @@
 package _07_tv_show_episode_info;
 
 
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -14,15 +17,30 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class TVShowEpisodeInfoDisplayer {
-	
+public class TVShowEpisodeInfoDisplayer implements ActionListener {
+	JTextField m_text = new JTextField();
 	public TVShowEpisodeInfoDisplayer() {
-		JTextField text = new JTextField();
-		JButton submit = new JButton();
+		m_text = createShowInput();
+		JButton submit = createSubmitButton();
 		JFrame frame = new JFrame();
 		JPanel panel = new JPanel();
+		panel.add(m_text);
+		panel.add(submit);
+		frame.add(panel);
+		frame.setVisible(true);
+		frame.pack();
 	}
-
+	private JTextField createShowInput(){
+		JTextField text = new JTextField();
+		text.setPreferredSize(new Dimension(200,30));
+		return text;
+	}
+	private JButton createSubmitButton(){
+		JButton submit = new JButton();
+		submit.setText("Submit");
+		submit.addActionListener(this);
+		return submit;
+	}
 	
 	
 	
@@ -80,5 +98,25 @@ public class TVShowEpisodeInfoDisplayer {
 		}
 		
 		return res;
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		//get what the user typed in the JTextField
+		String input = m_text.getText();
+		if ((input == null) || (input.isEmpty())) {
+			JOptionPane.showMessageDialog(null,"PLEASE PUT A SHOW NAME IN I BEG OF YOU \uD83D\uDE2D\uD83D\uDE2D\uD83D\uDE2D");
+
+		}
+		else {
+			String output = getShowEpisodeData(input);
+			if ((output == null) || (output.isEmpty())){
+				JOptionPane.showMessageDialog(null,"This show doesn't exist or you made a typo.");
+			}
+			else {
+				JOptionPane.showMessageDialog(null, output);
+			}
+
+		}
 	}
 }

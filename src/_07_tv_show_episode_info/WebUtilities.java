@@ -88,7 +88,6 @@ public class WebUtilities {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
 		return -1;
 	}
 }
