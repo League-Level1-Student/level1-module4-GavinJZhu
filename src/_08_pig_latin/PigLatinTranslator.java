@@ -1,5 +1,7 @@
 package _08_pig_latin;
 
+import game_tools.Sound;
+
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,19 +19,18 @@ public class PigLatinTranslator implements ActionListener{
      *            The sentence in English
      * @return The pig latin version
      */
-    
-	public static void main(String[] args) {
+    JFrame frame = new JFrame();
+    JPanel panel = new JPanel();
+    JTextField english = new JTextField();
+    JTextField pigLatin = new JTextField();
+    JButton englishTranslate = new JButton();
+    JButton pigLatinTranslate = new JButton();
+    JButton speak = new JButton();
+    public static void main(String[] args) {
 		
 	   
 	}
 	public PigLatinTranslator (){
-		JFrame frame = new JFrame();
-		JPanel panel = new JPanel();
-		JTextField english = new JTextField();
-	    JTextField pigLatin = new JTextField();
-	    JButton englishTranslate = new JButton();
-	    JButton pigLatinTranslate = new JButton();
-	    JButton speak = new JButton();	
 	    panel.add(english);
 	    panel.add(englishTranslate);
 	    panel.add(pigLatinTranslate);
@@ -160,6 +161,14 @@ public class PigLatinTranslator implements ActionListener{
     }
 	@Override
 	public void actionPerformed(ActionEvent e) {
-				
-	}
+        if (e.getSource() == englishTranslate){
+            pigLatin.setText(translateEnglishToPigLatin(english.getText()));
+        }
+        else if (e.getSource() == pigLatinTranslate) {
+            english.setText(translatePigLatinToEnglish(pigLatin.getText()));
+        }
+        else if (e.getSource() == speak){
+            Sound.speak(pigLatin.getText());
+        }
+    }
 }
