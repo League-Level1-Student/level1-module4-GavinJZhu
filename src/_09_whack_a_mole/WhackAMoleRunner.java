@@ -4,7 +4,7 @@ public class WhackAMoleRunner {
 public static void main(String[] args) {
 	
 
-whack_a_mole whack = new whack_a_mole();
+WhackAMole whack = new WhackAMole();
 whack.run();
 }
 }
