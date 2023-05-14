@@ -2,51 +2,65 @@ package _09_whack_a_mole;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Date;
 import java.util.Random;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class WhackAMole implements ActionListener {
     JFrame frame = new JFrame();
     JPanel panel = new JPanel();
     Random ran = new Random();
-
+    Date startTime = new Date();
     JButton mole = new JButton();
     int molesWhacked = 0;
     public void run() {
 
-        frame.add(panel);
+        
         frame.setVisible(true);
 
         frame.setSize(250, 325);
         drawButtons(ran.nextInt(24));
+
+        mole.addActionListener(this);
+
+        mole.setText("Mole!");
+        frame.add(panel);
+        
     if (molesWhacked == 10){
-        endGame(, 10);
+        
     }
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource().equals(mole)){
-        mole.setText("Mole!");
         molesWhacked = molesWhacked+1;
         drawButtons(ran.nextInt(24));
-
+        System.out.println("mole clicked!");
+         
     }
+       
+        if (molesWhacked == 10) {
+        	endGame(startTime, 10);
+		}  
         else{
-            speak("That isn't exactly the mole!");
+            //speak("That isn't exactly the mole!");
         }
     }
 
     public void drawButtons(int moleNumber) {
-        for (int j = 0; j < 23; j++) {
+    	System.out.println(moleNumber);
+    	panel.removeAll();
+        for (int j = 0; j < 24; j++) {
 
             if (j == moleNumber) {
                 panel.add(mole);
-                mole.addActionListener(this);
-            } else {
+            } 
+            else {
                 JButton blank = new JButton();
                 panel.add(blank);
                 blank.addActionListener(this);
