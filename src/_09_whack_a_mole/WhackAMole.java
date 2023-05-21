@@ -1,5 +1,6 @@
 package _09_whack_a_mole;
 
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Date;
@@ -54,7 +55,8 @@ public class WhackAMole implements ActionListener {
 
     public void drawButtons(int moleNumber) {
     	System.out.println(moleNumber);
-    	panel.removeAll();
+    	frame.remove(panel);
+    	panel = new JPanel();
         for (int j = 0; j < 24; j++) {
 
             if (j == moleNumber) {
@@ -66,7 +68,9 @@ public class WhackAMole implements ActionListener {
                 blank.addActionListener(this);
             }
         }
-
+        panel.setPreferredSize(new Dimension(250, 315));
+        frame.add(panel);
+        frame.pack();
     }
 
     static void speak(String words) {
