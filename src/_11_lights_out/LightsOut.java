@@ -25,7 +25,108 @@ public class LightsOut implements MouseListener {
 
 		/** PART 1. CREATE YOUR LIGHT BOARD **/
 		//1. Make your gamePanel a 5x5 grid with setLayout(new GridLayout(5, 5));
+		//
+		//
+		//
+		//
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
+		// u forgot to sign out of github
 		
+		// u forgot to sign out of github
+		// u forgot to sign out of github// u forgot to sign out of github
+		//
+		//
 		
 			//2. Add 25 JLabels to your gamePanel (these are your lights)
 
