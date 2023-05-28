@@ -2,13 +2,15 @@ package _10_slot_machine;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Random;
 
-public class SlotMachine implements MouseListener {
+public class SlotMachine implements ActionListener {
     JFrame frame = new JFrame();
     JPanel panel = new JPanel();
     JLabel cherryLabel;
@@ -29,6 +31,7 @@ public class SlotMachine implements MouseListener {
         panel.add(limeLabel);
         panel.add(orangeLabel);
         panel.add(spin);
+        spin.addActionListener(this);
         frame.setVisible(true);
         frame.add(panel);
 
@@ -38,17 +41,24 @@ public class SlotMachine implements MouseListener {
     }
 
     public void randomizeEachSlot(int numberOfSlots) {
-        for (int i = 0; i < numberOfSlots; i++) {
+    	System.out.println("spun");
+    	panel.removeAll();
+    	for (int i = 0; i < numberOfSlots; i++) {
+    	      frame.remove(panel);
+    	      
+    	      frame.add(panel);
             int imageNumber = ran.nextInt(3);
+            System.out.println(imageNumber);
             if (imageNumber == 0) {
-                panel.add(orangeLabel);
+                panel.add(createLabelImage(orange));
             } else if (imageNumber == 1) {
-                panel.add(limeLabel);
+                panel.add(createLabelImage(lime));
             } else {
-                panel.add(cherryLabel);
+                panel.add(createLabelImage(cherry));
             }
         }
-        frame.add(panel);
+       panel.add(spin);
+    	frame.pack();
     }
 
     private JLabel createLabelImage(String fileName)  {
@@ -63,32 +73,13 @@ public class SlotMachine implements MouseListener {
     }
 
 
-    @Override
-    public void mouseClicked(MouseEvent e) {
-        if (e.equals(spin)) {
-            randomizeEachSlot(3);
-        }
-    }
-
-    @Override
-    public void mousePressed(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseExited(MouseEvent e) {
-
-    }
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+    	   if (e.getSource().equals(spin)) {
+               randomizeEachSlot(3);
+           }
+	}
 }
 
 

@@ -1,6 +1,7 @@
 package _11_lights_out;
 
 import java.awt.Color;
+import java.awt.GridLayout;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -25,111 +26,10 @@ public class LightsOut implements MouseListener {
 
 		/** PART 1. CREATE YOUR LIGHT BOARD **/
 		//1. Make your gamePanel a 5x5 grid with setLayout(new GridLayout(5, 5));
-		//
-		//
-		//
-		//
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		// u forgot to sign out of github
-		
-		// u forgot to sign out of github
-		// u forgot to sign out of github// u forgot to sign out of github
-		//
-		//
+		gamePanel.setLayout(new GridLayout(5, 5));
 		
 			//2. Add 25 JLabels to your gamePanel (these are your lights)
-
+			`
 			//3. Use setText() to add a position number to each light (0-24).
 
 			//4. Set the background of each light to LIGHT_GRAY
