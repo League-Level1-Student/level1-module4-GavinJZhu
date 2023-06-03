@@ -44,9 +44,7 @@ public class SlotMachine implements ActionListener {
     	System.out.println("spun");
     	panel.removeAll();
     	for (int i = 0; i < numberOfSlots; i++) {
-    	      frame.remove(panel);
-    	      
-    	      frame.add(panel);
+
             int imageNumber = ran.nextInt(3);
             System.out.println(imageNumber);
             if (imageNumber == 0) {
