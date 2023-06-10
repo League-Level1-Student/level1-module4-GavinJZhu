@@ -41,9 +41,8 @@ public class LightsOut implements MouseListener {
         gameFrame.add(gamePanel);
         //7. Set the size of the frame
         gameFrame.setSize(500, 500);
-        gameFrame.setVisible(true);
         randomizeBoard();
-
+        gameFrame.setVisible(true);
     }
 
     private void createLights() {
@@ -69,46 +68,49 @@ public class LightsOut implements MouseListener {
         // 4.Check if the player has won (e.g. all the lights are off)
         // ---- HINT: use `getLightAtPosition` to get the light at each position
         // ---------- use 'getBackground' to get the light color
-        if (isGameOver()){
-            JOptionPane.showMessageDialog(null,"You win!");
+        if (isGameOver()) {
+            JOptionPane.showMessageDialog(null, "You win!");
         }
-        /** PART 3: RANDOMIZE YOUR BOARD **/
-        // Now that your game works can you make the game start with some lights on?
     }
 
+    /**
+     * PART 3: RANDOMIZE YOUR BOARD
+     **/
+    // Now that your game works can you make the game start with some lights on?
     private void randomizeBoard() {
         Random ran = new Random();
-        for (int positionOfLight=0; positionOfLight<25; positionOfLight++){
+        for (int positionOfLight = 0; positionOfLight < 25; positionOfLight++) {
             //randomize each light
             int oneOrTwo = ran.nextInt(2);
-            if (oneOrTwo == 1){
+            if (oneOrTwo == 1) {
                 turnOffLight(positionOfLight);
             } else {
                 turnOnLight(positionOfLight);
             }
         }
     }
-    private void turnOnLight(int lightPosition){
+
+    private void turnOnLight(int lightPosition) {
         JLabel light = getLightAtPosition(lightPosition);
         light.setBackground(Color.WHITE);
     }
-    private void turnOffLight(int lightPosition){
+
+    private void turnOffLight(int lightPosition) {
         JLabel light = getLightAtPosition(lightPosition);
         light.setBackground(Color.LIGHT_GRAY);
     }
+
     boolean isGameOver() {
         // 4.Check if the player has won (e.g. all the lights are off)
         // ---- HINT: use `getLightAtPosition` to get the light at each position
         // ---------- use 'getBackground' to get the light color
-        boolean gameOver = false;
         for (int j = 0; j < 25; j++) {
             JLabel light = getLightAtPosition(j);
             Color background = light.getBackground();
-            if (isLightOff(background)){
+            if (isLightOff(background)) {
                 //light is off, check next light
                 //do nothing, jump back to for-loop
-            }
-            else{
+            } else {
                 //light is on
                 //no need to keep checking
                 return false;
@@ -120,7 +122,7 @@ public class LightsOut implements MouseListener {
 
     private boolean isLightOff(Color background) {
         boolean off = false;
-        if (background.equals(Color.LIGHT_GRAY)){
+        if (background.equals(Color.LIGHT_GRAY)) {
             off = true;
         }
         return off;

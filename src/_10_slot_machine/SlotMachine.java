@@ -32,18 +32,15 @@ public class SlotMachine implements ActionListener {
         panel.add(orangeLabel);
         panel.add(spin);
         spin.addActionListener(this);
-        frame.setVisible(true);
         frame.add(panel);
-
         spin.setText("Spin");
-
         frame.pack();
+        frame.setVisible(true);
     }
 
     public void randomizeEachSlot(int numberOfSlots) {
-    	System.out.println("spun");
-    	panel.removeAll();
-    	for (int i = 0; i < numberOfSlots; i++) {
+        panel.removeAll();
+        for (int i = 0; i < numberOfSlots; i++) {
 
             int imageNumber = ran.nextInt(3);
             System.out.println(imageNumber);
@@ -55,13 +52,13 @@ public class SlotMachine implements ActionListener {
                 panel.add(createLabelImage(cherry));
             }
         }
-       panel.add(spin);
-    	frame.pack();
+        panel.add(spin);
+        frame.pack();
     }
 
-    private JLabel createLabelImage(String fileName)  {
+    private JLabel createLabelImage(String fileName) {
         URL imageURL = getClass().getResource(fileName);
-        if (imageURL == null){
+        if (imageURL == null) {
             System.err.println("Could not find image " + fileName);
             return new JLabel();
         }
@@ -71,13 +68,12 @@ public class SlotMachine implements ActionListener {
     }
 
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-    	   if (e.getSource().equals(spin)) {
-               randomizeEachSlot(3);
-           }
-	}
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource().equals(spin)) {
+            randomizeEachSlot(3);
+        }
+    }
 }
 
 
