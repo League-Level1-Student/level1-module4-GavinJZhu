@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.Random;
 
 import javax.swing.*;
 
@@ -41,6 +42,8 @@ public class LightsOut implements MouseListener {
         //7. Set the size of the frame
         gameFrame.setSize(500, 500);
         gameFrame.setVisible(true);
+        randomizeBoard();
+
     }
 
     private void createLights() {
@@ -66,11 +69,33 @@ public class LightsOut implements MouseListener {
         // 4.Check if the player has won (e.g. all the lights are off)
         // ---- HINT: use `getLightAtPosition` to get the light at each position
         // ---------- use 'getBackground' to get the light color
+        if (isGameOver()){
+            JOptionPane.showMessageDialog(null,"You win!");
+        }
         /** PART 3: RANDOMIZE YOUR BOARD **/
         // Now that your game works can you make the game start with some lights on?
-
     }
 
+    private void randomizeBoard() {
+        Random ran = new Random();
+        for (int positionOfLight=0; positionOfLight<25; positionOfLight++){
+            //randomize each light
+            int oneOrTwo = ran.nextInt(2);
+            if (oneOrTwo == 1){
+                turnOffLight(positionOfLight);
+            } else {
+                turnOnLight(positionOfLight);
+            }
+        }
+    }
+    private void turnOnLight(int lightPosition){
+        JLabel light = getLightAtPosition(lightPosition);
+        light.setBackground(Color.WHITE);
+    }
+    private void turnOffLight(int lightPosition){
+        JLabel light = getLightAtPosition(lightPosition);
+        light.setBackground(Color.LIGHT_GRAY);
+    }
     boolean isGameOver() {
         // 4.Check if the player has won (e.g. all the lights are off)
         // ---- HINT: use `getLightAtPosition` to get the light at each position
@@ -86,10 +111,11 @@ public class LightsOut implements MouseListener {
             else{
                 //light is on
                 //no need to keep checking
-                return gameOver;
+                return false;
             }
         }
-        return gameOver;
+        //true means game is over, because for loop ended
+        return true;
     }
 
     private boolean isLightOff(Color background) {
